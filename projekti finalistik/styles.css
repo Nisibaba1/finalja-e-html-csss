@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contenair2{
+    width: 100%;
+    height: 100vh;
+    background:black;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+  }
+.nav-bar .title {
+    color: #fff;
+    font-size: 67px;
+    font-weight: 500;
+    cursor: pointer;
+    animation: titleAnimation 2s ease-in;
+  }
+  @keyframes titleAnimation {
+    0% {
+      color: black;
+    }
+    50% {
+      color: gold;
+    }
+    100% {
+      color:goldenrod;
+    }
+  }
+  span {
+    color: crimson;
+  }
+  
+  .nav-bar p {
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    animation: paragrafi 2s ease-in;
+  }
+  @keyframes paragrafi{
+    0%{
+      color: black;
+    }
+    50%{
+      color: gold;
+    }
+    100%{
+      color: goldenrod;
+    }
+  }
+  .menu li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: 0.4s ease;
+  }
+  
+  .menu li a:hover {
+    color: crimson;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+  }
+  
+  .menu a.active {
+    color: red;
+  }
+  
+.main{
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+  }
+  
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 20px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-card h2 {
+    font-size: 1.5rem;
+    color: crimson;
+    margin: 15px 0;
+  }
+  
+  .product-card p {
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .product-card .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #e67e22;
+  }
+  
+  .product-card button {
+    background-color: #5c4033;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .product-card button a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .product-card button:hover {
+    background-color: #e67e22;
+  }
+  .main1{
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .img{
+    width: 200px;
+    height: 200px;
+  }
+  @media (max-width: 768px) {
+      body{
+        background: black;
+      }
+    .nav-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .nav-bar .title {
+        font-size: 48px;
+        margin-top: -15px;
+    }
+  
+    .nav-bar p {
+      margin-top: 25px;
+      margin-right: 45px;
+    }
+  
+    .menu {
+      margin-top: -20px;
+      font-size: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: end;
+    }
+  
+    .menu li {
+      margin-top: 50px;
+
+    }
+  
+    .menu li a {
+      font-size: 10px;
+      margin-left: 10px;
+    }
+  
+    .main,.main1 {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 20px;
+    }
+  
+    .product-card {
+        width: 100%; 
+        max-width: none;
+        background-color: black;
+        color: white;
+    }
+    .product-card p{
+        color: #fff;
+        font-size: 18px;
+    }
+  
+    .product-container {
+        margin: 20px 0;
+        color: #fff;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-bar .title {
+        font-size: 36px;
+    }
+  
+    .menu li a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+  
+    .product-card h2 {
+        font-size: 1.25rem;
+    }
+  
+    .product-card .price {
+        font-size: 1rem;
+        color: red;
+    }
+  }
+  

@@ -1,0 +1,712 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Fillimi index*/
+.container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background.webp');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 80px;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.nav-bar .title {
+  color: #fff;
+  font-size: 67px;
+  font-weight: 500;
+  cursor: pointer;
+  animation: titleAnimation 2s ease-in-out;
+}
+
+
+@keyframes titleAnimation {
+  0% {
+    color: black;
+  }
+  50% {
+    color: gold;
+  }
+  100% {
+    color:goldenrod;
+  }
+}
+
+span {
+  color: crimson;
+}
+
+.nav-bar p {
+  position: absolute;
+  margin-top: 90px;
+  margin-left: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  animation: fadeInText 2s ease-in-out;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 1;
+    color: gold;
+  }
+}
+
+.menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  margin-left: 25px;
+  transition: 0.4s ease;
+}
+
+.menu li a:hover {
+  color: crimson;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+}
+
+.menu a.active {
+  color: red;
+}
+
+.home {
+  height: 500px;
+  padding-right: 300px;
+  padding-top: 200px;
+  padding-left: 100px;
+  animation: homeAnimation 2s ease-in-out;
+}
+
+@keyframes homeAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.title-1 {
+  font-size: 56px;
+  color: #fff;
+  font-weight: 600;
+  animation: titleFadeIn 2s ease-in-out;
+}
+
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home p {
+  color: lemonchiffon;
+  font-size: 20px;
+  margin-top: 10px;
+  animation: textFadeIn 2s ease-in-out;
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.home button {
+  height: 40px;
+  color: #fff;
+  background: crimson;
+  font-size: 22px;
+  padding: 5px 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  animation: buttonZoom 1.5s ease-out;
+}
+
+@keyframes buttonZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.home button:hover {
+  background: none;
+  border: 2px solid crimson;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1024px) {
+  .nav-bar {
+    padding: 20px 40px;
+  }
+
+  .nav-bar .title {
+    font-size: 100px;
+    font-weight: 600;
+  }
+  .nav-bar p {
+    margin-top: 40px;
+  }
+
+  .menu li a {
+    font-size: 20px;
+  }
+
+  .home {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 135px;
+  }
+
+  .title-1 {
+    font-size: 40px;
+  }
+
+  .home p {
+    font-size: 18px;
+  }
+
+  .home button {
+    font-size: 18px;
+    padding: 5px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 10px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-bar .title {
+    font-size: 55px;
+    margin-top: 10px;
+  }
+
+  .nav-bar p {
+    margin-top: 55px;
+    margin-right: 45px;
+  }
+
+  .menu {
+    flex-direction: column;
+    margin-top: -10px;
+  }
+
+  .menu li {
+    margin-top: 50px;
+  }
+
+  .menu li a {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .home {
+    height: 300px;
+    padding: 40px 20px;
+  }
+
+  .title-1 {
+    font-size: 32px;
+  }
+
+  .home p {
+    font-size: 16px;
+  }
+
+  .home button {
+    font-size: 16px;
+    padding: 5px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-bar {
+    padding: 10px 15px;
+  }
+
+  .nav-bar .title {
+    font-size: 70px;
+    font-weight: 600;
+  }
+
+  .menu li a {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .home {
+    height: 250px;
+    padding: 30px 15px;
+  }
+
+  .title-1 {
+    font-size: 28px;
+  }
+
+  .home p {
+    font-size: 14px;
+  }
+
+  .home button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*ku mbaron css per index*/
+
+/*Fillimi services*/
+.h1{
+    color: #fff; 
+    animation:h1 3s ease-in ;
+}
+@keyframes h1{
+  0%{
+    opacity: 0;
+    color:white ;
+  }
+  100%{
+    opacity: 1;
+    color: gold;
+  }
+}
+.ul{
+    color: #fff;
+    animation: ul 2s ease-in;
+}
+@keyframes ul {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    color: gold;
+  }
+}
+.ul li{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+}
+.divi1{
+    margin-top: 100px;
+    margin-left: 550px;
+}
+.h2{
+    margin-top: 50px;
+    color: #fff;
+    animation: h2 3s ease-in;
+}
+@keyframes h2{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    color: gold;
+  }
+}
+.container-3{
+    height: 100vh;
+    width: 100%;
+    background: black;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;   
+    overflow: hidden;
+}
+@media (max-width: 1024px) {
+    .divi1 {
+      margin-left: 5%;
+      margin-top: 60px;
+    }
+  
+    .h1 {
+      font-size: 28px;
+    }
+  
+    .h2 {
+      font-size: 26px;
+    }
+  
+    .ul li {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .divi1 {
+      margin-left: 5%;
+      margin-top: 40px;
+      max-width: 90%;
+    }
+  
+    .h1 {
+      font-size: 24px;
+    }
+  
+    .h2 {
+      font-size: 22px;
+    }
+  
+    .ul li {
+      font-size: 16px;
+    }
+  
+    .nav-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-bar .menu {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .divi1 {
+      margin-left: 5%;
+      margin-top: 20px;
+      max-width: 100%;
+    }
+  
+    .h1 {
+      font-size: 20px;
+    }
+  
+    .h2 {
+      font-size: 20px;
+    }
+  
+    .ul li {
+      font-size: 14px;
+    }
+  
+    .nav-bar .title {
+      font-size: 28px;
+    }
+  
+    .nav-bar .menu li a {
+      font-size: 16px;
+    }
+  }
+
+/*Mbarimi i services*/
+/*Fillimi about*/
+.d2{
+    background-color: black;
+    color: #fff;
+   
+}
+.d3{
+    height: 70px;
+    width: 650px;
+    margin-left: 750px;
+    margin-top: 200px;
+    color: #fff;
+}
+.p1{
+    font-size:20px;
+}
+.h6{
+    font-size: 35px;
+    animation: h6 3s ease-in;
+}
+@keyframes h6{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    color: gold;
+  }
+}
+.d3 button {
+    height: 40px;
+    color: #fff;
+    background: crimson;
+    font-size: 22px;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    transition: .4s ease;
+    cursor: pointer;
+}
+button:hover {
+    background: none;
+    border: 2px solid crimson;
+}
+.d4{
+    width: 500px;
+    height: 300px;
+    margin-left: 150px;
+}
+.img1{
+    width: 500px;
+    height: 300px;
+    margin-top: -75px;
+}
+@media (max-width: 768px) {
+  body{
+    background-color: black;
+  }
+    .d3 {
+      width: 90%;
+      margin: 20px;
+      text-align: center;
+    }
+  
+    .d3 .h6 {
+      font-size: 28px;
+    }
+  
+    .d3 .p1 {
+      font-size: 18px;
+    }
+  
+    .img1 {
+       width: 100%;
+       height: auto;
+       margin-top: 250px;
+       margin-left: -150px;
+    }
+  
+    .nav-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-bar .menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .nav-bar .title {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .d3 .h6 {
+      font-size: 24px;
+    }
+  
+    .d3 .p1 {
+      font-size: 16px;
+    }
+  
+    .img1 {
+        width: 100%;
+        height: auto;
+        margin-top: 300px;
+        margin-left: -150px;
+    }
+  
+    .nav-bar .title {
+      font-size: 40px;
+      font-weight: 500;
+    }
+  
+    .nav-bar .menu {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  
+    .d3 button {
+      font-size: 18px;
+      padding: 5px 20px;
+    }
+  }
+/*Perfundimi i about*/
+/*fillimi i contact*/
+.body{
+    font-family: 'Outfit';
+    background: black;
+}
+.contact-contanier{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -60px;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.contact-left-title .h2{
+    font-weight: 600;
+    color: #a363aa;
+    font-size: 40px;
+    margin-bottom: 5px;
+    animation:left-title-h2 3s ease-in;
+}
+@keyframes left-title-h2 {
+  0%{
+    opacity: 0;
+    color: #a363aa;
+  }
+  100%{
+    opacity: 1;
+    color: #a363aa;
+  }
+}
+.contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #a363aa;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+.contact-inputs textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+.contact-left .button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#ff994f,#fa6d86);
+}
+.contact-right img{
+    width: 500px;
+}
+@media (max-width: 768px) {
+    .contact-contanier {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .contact-left {
+      width: 80%;
+      align-items: center;
+    }
+  
+    .contact-left .h2 {
+      font-size: 35px;
+    }
+  
+    .contact-inputs {
+      width: 100%;
+      max-width: 90%;
+    }
+  
+    .contact-left .button {
+      padding: 12px 25px;
+      font-size: 14px;
+    }
+  
+    .contanier-right img {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-left .h2 {
+      font-size: 30px;
+    }
+  
+    .contact-left-title hr {
+      width: 80px;
+      height: 4px;
+    }
+  
+    .contact-left .button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  
+    .contact-inputs {
+      max-width: 100%;
+    }
+  
+    .contanier-right img {
+      width: 100%;
+      height: auto;
+    }
+  }
+/*fundi i contact*/
